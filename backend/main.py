@@ -63,11 +63,11 @@ class SMEFinanceAgents:
                 "SMEs should diversify revenue streams to reduce dependency on single customers.",
                 "Inventory turnover ratio indicates how efficiently an SME manages its stock.",
                 "Break-even analysis helps SMEs determine minimum sales needed for profitability.",
-                "Singapore SMEs can access Enterprise Development Grant (EDG) for up to 70% funding.",
-                "Best SMEs in Singapore often leverage digital transformation and innovation.",
-                "Singapore's top SMEs focus on sustainability and ESG practices.",
-                "MAS provides various financing schemes for Singapore SMEs.",
-                "SPRING Singapore offers capability development programs for local SMEs."
+                "Indonesia SMEs can access Enterprise Development Grant (EDG) for up to 70% funding.",
+                "Best SMEs in Indonesia often leverage digital transformation and innovation.",
+                "Indonesia's top SMEs focus on sustainability and ESG practices.",
+                "MAS provides various financing schemes for Indonesia SMEs.",
+                "SPRING Indonesia offers capability development programs for local SMEs."
             ]
             
             # Add documents to collection if empty
@@ -106,7 +106,7 @@ class SMEFinanceAgents:
         """Agent for searching financial information - using alternative approach"""
         try:
             system_prompt = """You are a financial advisor specializing in SME finance with access to current 
-            information about SMEs, particularly in Singapore and Asia. Provide accurate, helpful information 
+            information about SMEs, particularly in Indonesia and Asia. Provide accurate, helpful information 
             based on your knowledge up to 2024."""
             
             analysis_prompt = f"""
@@ -119,7 +119,7 @@ class SMEFinanceAgents:
             4. Relevant regulations or policies
             5. Practical insights for SMEs
             
-            If the query is about Singapore SMEs, include:
+            If the query is about Indonesia SMEs, include:
             - Government initiatives and support schemes
             - Success stories and case studies
             - Industry-specific insights
@@ -140,8 +140,8 @@ class SMEFinanceAgents:
                     'snippet': 'Latest developments in SME financing and support schemes...'
                 },
                 {
-                    'title': 'Singapore SME Landscape',
-                    'snippet': 'Overview of Singapore\'s thriving SME ecosystem and opportunities...'
+                    'title': 'Indonesia SME Landscape',
+                    'snippet': 'Overview of Indonesia\'s thriving SME ecosystem and opportunities...'
                 }
             ]
             
@@ -183,7 +183,7 @@ class SMEFinanceAgents:
             
             context = "\n".join(relevant_docs)
             
-            system_prompt = "You are an expert financial advisor for SMEs with deep knowledge of financial management, particularly in Singapore and Southeast Asia."
+            system_prompt = "You are an expert financial advisor for SMEs with deep knowledge of financial management, particularly in Indonesia and Southeast Asia."
             
             rag_prompt = f"""
             Based on the following context from our knowledge base, answer the question about SME finance.
@@ -198,7 +198,7 @@ class SMEFinanceAgents:
             2. Supporting information from the context
             3. Practical examples for SMEs
             4. Additional considerations
-            5. Specific insights for Singapore SMEs if relevant
+            5. Specific insights for Indonesia SMEs if relevant
             """
             
             answer = self.call_llama(rag_prompt, system_prompt)
